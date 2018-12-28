@@ -19,6 +19,7 @@
         <li><a href="sellharvest.php"> PROFILE </a> </li>
         <li><a href="./allproducts.php"> MY PRODUCTS </a> </li>
         <li><a href="index.php"> LOG OUT </a> </li>
+        <li><a href="./orders.php"> ORDER REQUESTS </a></li>
         <li> <?php
   session_start();
   $user= $_SESSION['user'];

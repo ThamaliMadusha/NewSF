@@ -35,7 +35,7 @@ if($_SESSION["buyer"] != true){
         $query = "SELECT cat FROM `products`";
         $result = mysqli_query($link,$query);
         echo "<select name='cat'>";
-        while($row=mysqli_fetch_array($result, MYSQL_ASSOC)){                                                 
+        while($row=mysqli_fetch_array($result)){                                                 
       
         echo " <option value='".$row['cat']."'>" .$row["cat"] ."</option>"  ;
       
