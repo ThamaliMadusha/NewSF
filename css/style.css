@@ -1,0 +1,117 @@
+body,html{
+	padding:0px;
+	margin:0px;
+	font-family: 'Open Sans', sans-serif;
+	}
+
+.main{
+  font-family: sans-serif;
+}
+
+.login{
+  /*position: absolute;
+  right: 5px;
+  width: 100%;
+  padding: 5px;
+  background-color: #3CB371;
+  display:block;*/
+}
+.topnav{
+  color: white;
+  background-color: #3CB371;
+  height: 100px;
+
+}
+
+.nametxt{
+  padding-top: 5px;  
+  padding-left: 16px; 
+  text-align: center;
+}
+
+.navbar1{
+  margin: 0px;
+  
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.body {
+   background-image: url("img/banner.jpg");
+ }
+
+.img1{
+  position: absolute;
+  right: 5%;
+  width: 150px;
+  height: 135px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3CB371;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111111;
+}
+
+.font1{
+font-family: cursive;
+}
+.font2{
+font-family: serif;
+}
+.font3{
+  font-family: sans-serif;
+}
+.font4{
+  font-family: monospace;
+}
+.font5{
+  font-family: cursive;
+}
+.font6{
+  font-family: fantasy;
+}
+.font7{
+  font-family: system-ui;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  /*background-color: #2196F3;*/
+  padding: 10px;
+}
+
+.grid-item {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  border: 0px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contact{
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
