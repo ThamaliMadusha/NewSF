@@ -24,6 +24,10 @@ li a {
 li a:hover {
   background-color: #111111;
 }
+
+.topnav-right {
+  float: right;
+}
 .topnav{
   color: white;
   background-color: #3CB371;
