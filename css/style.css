@@ -4,6 +4,10 @@ body,html{
 	font-family: 'Open Sans', sans-serif;
 	}
 
+.topnav-right {
+  float: right;
+}
+
 .main{
   font-family: sans-serif;
 }
