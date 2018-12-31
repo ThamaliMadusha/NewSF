@@ -10,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style type=text/css> 
 #wrap{width:95%; height: 500px;padding-right: 5px; padding-left: 5px;padding-bottom: 5px;}
-.right{width:300px; height:250px; float:right;}
-.left{width: 300px; height:250px; float:left;}
+.right{width:30%; height:250px; float:right;}
+.left{width: 30%; height:250px; float:left;}
 </style>
     <title>Document</title>
     
@@ -22,81 +22,97 @@
     
     <h1 style="text-align:center;">All products</h1>
 
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 250px;">
+            <img class="card-img-top" src="./img/veg.jpg" alt="Card image cap" width="250px" height="250px">
+            <div class="card-body text-center">
+                <h5 class="card-title">Vegetables</h5>
+                <form action="displayCat.php" method="POST">
+                    <input type="submit" name="veg" class="btn btn-primary" value="Vegetables">
+                </form>
+            </div>
+            </div>
+        </div>
 
-<div class="pg">
-    <div class="product-list">
-       <form action="allproducts.php" method="POST"> 
-    <?php
-        $query = "SELECT cat FROM products";
-        $result = mysqli_query($link,$query);
-        echo "<select name='cat'>";
-        while($row=mysqli_fetch_array($result,MYSQL_ASSOC)){                                                 
-        echo " <option value='".$row['cat']."'>" .$row["cat"] ."</option>"  ;
-      
-        }
-        echo "</select>" ;
-    ?>
-     <input type="submit" name="search" value="Search">
-    </form> 
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="./img/fruit.jpg" alt="Card image cap" width="250px" height="250px">
+            <div class="card-body text-center">
+                <h5 class="card-title">Fruits</h5>
+                <form action="displayCat.php" method="POST">
+                    <input type="submit" name="fruits" class="btn btn-primary" value="Fruits">
+                </form>
+            </div>
+            </div>
+        </div>
 
-        
- <?php
-        if (isset($_POST['search'])) {
-            
-            $c = $_POST['cat'];
-            if ($c == "Fruits") {
-        $categary = "Fruits";
-    } else if($c == "Vegetables") {
-        $categary = "Vegetables";
-    } else if($c == "Agricutural tools") {
-        $categary = "Agricutural tools";
-    } else if($c == "Home-made foods") {
-        $categary = "Home-made foods";
-    } else if($c == "Handycrafts") {
-        $categary = "Handycrafts";
-    } else if($c == "Other") {
-        $categary = "Other";
-    }
-            $i=0; 
-            $res=mysqli_query($link,"SELECT * FROM products where cat='$categary'");
-            echo "<table style='margin-left:350px;margin-top:50px;'>";
-            echo "<tr>";
-            while($row=mysqli_fetch_array($res,MYSQL_ASSOC)){
-                $i= $i+1;
-                echo"<td>";
-                ?>
-                <img src="<?php echo $row["image"]; ?>" height="200" width="200">   
-                <?php
-                echo "<br>";
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="./img/tools.jpg" alt="Card image cap" width="250px" height="250px">
+            <div class="card-body text-center">
+                <h5 class="card-title">Tools</h5>
+                <form action="displayCat.php" method="POST">
+                    <input type="submit" name="tools" class="btn btn-primary" value="Tools">
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
 
-                echo"<br>"."Product Name : "."   ".$row["iname"]."</br>";
-                echo"<br>"."Total Quantity: ".$row["quantity"]."</br>";
-                echo "<br>"."Unit Price: ".$row["price"]."<br>";
-                echo "<br>". "<a href='edit.php'> Editsss product </a>" ;
-                echo "<br>";
-               
 
-                if($i==3){
-                    echo "</tr>";
-                    echo "<tr>";
-                    $i=0;
-                }
-                
-                
-            }
-            echo "</tr>";
-            echo "</table>";
-        
-        }
-            
-            
-     ?>
+<br>
+<br>
 
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="./img/foods.jpg" alt="Card image cap" width="250px" height="250px">
+            <div class="card-body text-center">
+                <h5 class="card-title">Home-Made Foods</h5>
+                <form action="displayCat.php" method="POST">
+                    <input type="submit" name="foods" class="btn btn-primary" value="Home-Made Foods">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="col-md-4 ac">
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="./img/crafts.jpg" alt="Card image cap" width="250px" height="250px">
+            <div class="card-body text-center">
+                <h5 class="card-title">Handicrafts</h5>
+                <form action="displayCat.php" method="POST">
+                    <input type="submit" name="handi" class="btn btn-primary" value="Handicrafts">
+                </form>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="./img/other.jpg" alt="Card image cap" width="250px" height="250px">
+            <div class="card-body text-center">
+                <h5 class="card-title">Other</h5>
+                <form action="displayCat.php" method="POST">
+                    <input type="submit" name="other" class="btn btn-primary" value="Other">
+                </form>
+            </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div id="wrap">
-    <div class="left"> afv</div>
+</div>
+</body>
+</html>
+
+<!-- <div id="wrap">
+    <div class="left"> <a href="veg.html" > <img src="img/veg.jpg" > </div>
     <div class="left"> afv</div>
 
     <div class="right">vsv </div>
@@ -107,7 +123,7 @@
     <div class="left"> afv</div>
 
     <div class="right">5432 </div>
-</div>
+</div> -->
 
 
 
