@@ -26,10 +26,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <div class="card" style="width: 250px;">
+            <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./img/veg.jpg" alt="Card image cap" width="250px" height="250px">
             <div class="card-body text-center">
-                <h5 class="card-title">Vegetables</h5>
                 <form action="displayCat.php" method="POST">
                     <input type="submit" name="veg" class="btn btn-primary" value="Vegetables">
                 </form>
@@ -41,7 +40,6 @@
             <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./img/fruit.jpg" alt="Card image cap" width="250px" height="250px">
             <div class="card-body text-center">
-                <h5 class="card-title">Fruits</h5>
                 <form action="displayCat.php" method="POST">
                     <input type="submit" name="fruits" class="btn btn-primary" value="Fruits">
                 </form>
@@ -53,7 +51,6 @@
             <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./img/tools.jpg" alt="Card image cap" width="250px" height="250px">
             <div class="card-body text-center">
-                <h5 class="card-title">Tools</h5>
                 <form action="displayCat.php" method="POST">
                     <input type="submit" name="tools" class="btn btn-primary" value="Tools">
                 </form>
@@ -71,12 +68,11 @@
             <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./img/foods.jpg" alt="Card image cap" width="250px" height="250px">
             <div class="card-body text-center">
-                <h5 class="card-title">Home-Made Foods</h5>
                 <form action="displayCat.php" method="POST">
                     <input type="submit" name="foods" class="btn btn-primary" value="Home-Made Foods">
                 </form>
             </div>
-        </div>
+            </div>
     </div>
 
 
@@ -85,7 +81,6 @@
             <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./img/crafts.jpg" alt="Card image cap" width="250px" height="250px">
             <div class="card-body text-center">
-                <h5 class="card-title">Handicrafts</h5>
                 <form action="displayCat.php" method="POST">
                     <input type="submit" name="handi" class="btn btn-primary" value="Handicrafts">
                 </form>
@@ -97,7 +92,6 @@
             <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./img/other.jpg" alt="Card image cap" width="250px" height="250px">
             <div class="card-body text-center">
-                <h5 class="card-title">Other</h5>
                 <form action="displayCat.php" method="POST">
                     <input type="submit" name="other" class="btn btn-primary" value="Other">
                 </form>
