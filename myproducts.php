@@ -62,19 +62,13 @@ if($_SESSION["user"] != true){
                 if($i==3){
                     echo "</tr>";
                     echo "<tr>";
-                    $i=0;
-                }
-                
-
-
+                    $i=0; }
                 
             }
             echo "</tr>";
             echo "</table>";
-            
-        
-        ?>
-
+              ?>
+              
             <script>
              function myFunction(){
                  confirm("Are You sure You want to delete this Product");
