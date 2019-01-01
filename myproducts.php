@@ -27,12 +27,12 @@ if($_SESSION["user"] != true){
 <body>
 <!-- NAvigation bar -->
 
-<?php require "navbar/viewnav.php"; ?>
+<?php require "includes/wateringhead.php"; ?>
 
 <h1 style="text-align:center;">My products</h1>
     <div class="product-list">
         <?php
-            $agent=$_SESSION["user"];
+            $user=$_SESSION["user"];
             $i=0; 
             $res=mysqli_query($link,"SELECT * FROM products WHERE sellername ='$user'");
             echo "<table style='margin-left:350px;margin-top:50px;'>";
@@ -41,18 +41,22 @@ if($_SESSION["user"] != true){
                 $i= $i+1;
                 echo"<td>";
                 ?>
-                <img src="<?php echo $row["img"]; ?>" height="200" width="200">
+                <img src="<?php echo  $row["image"]; ?>" height="200" width="200">
                 <?php
                 echo "<br>";
-                echo"<b>"."Product Name ".$row["iname"]."</b>";
-                echo "<br>";
-                echo"<b>"."Quantity ".$row["quantity"]."</b>";
-                echo"<br>";
-                echo "<br>"."Unit Price ".$row["unitprice"]."<br>";
-                echo "<br>"."Agent Name: ".$row["agentname"]."<br>";
-                echo "<br>"."Discount ".$row["discount"]."%"."<br>";
-                echo"<br>";?><a href="../agent/edit.php?id=<?php echo $row["id"];?>& pname=<?php echo $row["pname"]; ?> & pquantity=<?php echo $row["pquantity"]; ?> & agentname=<?php echo $row["agentname"]; ?>& unitprice=<?php echo $row["unitprice"]; ?>& discount=<?php echo $row["discount"]; ?>">Edit Product</a><?php echo"</br>";
-                echo"<br>";?><a href="../agent/del.php?id=<?php echo $row["id"];?>"onclick="myFunction()">Delete Product</a><?php echo"</br>";
+                echo"<b>"."Product Name : "."</b>".$row["iname"]."<br>";
+                echo"<b>"."Quantity : "."</b>".$row["quantity"]."<br>";
+                echo "<b>"."Price :  "."</b>".$row["price"]."<br>";
+                echo "<b>"."Price :  "."</b>".$row["price"]."<br>";
+                echo "<b>"."Category  : "."</b>".$row["cat"]."</b>"."<br>" ;?>
+                 <a href="edit.php?> 
+                    id=<?php echo $row["id"];?> 
+                    & iname=<?php echo $row["iname"]; ?> & quantity=<?php echo $row["quantity"]; ?>
+                    & price=<?php echo $row["price"];  ?> & Category=<?php echo $row["cat"];  ?>
+                    & quantity=<?php echo $row["quantity"];?>">
+                    <b>Edit Product</b></a>
+                    <?php 
+                     echo"<br>";?><a href="del.php?id=<?php echo $row["id"];?>"onclick="myFunction()"><b>Delete Product</b></a><?php echo"</br>";
 
                 echo "</td>";
                 if($i==3){

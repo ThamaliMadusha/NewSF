@@ -8,11 +8,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style type=text/css> 
-#wrap{width:95%; height: 500px;padding-right: 5px; padding-left: 5px;padding-bottom: 5px;}
-.right{width:30%; height:250px; float:right;}
-.left{width: 30%; height:250px; float:left;}
-</style>
     <title>Document</title>
     
 </head>
@@ -105,22 +100,7 @@
 </body>
 </html>
 
-<!-- <div id="wrap">
-    <div class="left"> <a href="veg.html" > <img src="img/veg.jpg" > </div>
-    <div class="left"> afv</div>
-
-    <div class="right">vsv </div>
-</div>
-
-<div id="wrap">
-    <div class="left">455</div>
-    <div class="left"> afv</div>
-
-    <div class="right">5432 </div>
-</div> -->
 
 
 
-
-    </body>
-</html>
+    
