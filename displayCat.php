@@ -8,11 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style type=text/css> 
-#wrap{width:95%; height: 500px;padding-right: 5px; padding-left: 5px;padding-bottom: 5px;}
-.right{width:30%; height:250px; float:right;}
-.left{width: 30%; height:250px; float:left;}
-</style>
+    
     <title>Document</title>
     
 </head>
@@ -63,12 +59,17 @@
                 <?php
                 echo "<br>";
 
-                echo"<br>"."Product Name : "."   ".$row["iname"]."</br>";
-                echo"<br>"."Total Quantity: ".$row["quantity"]."</br>";
-                echo "<br>"."Unit Price: ".$row["price"]."<br>";
-                echo "<br>". "<a href='edit.php'> Edit product </a>" ;
-                echo "<br>";
-               
+                echo"<br>"."Product Name : "."   ".$row["iname"];
+                echo"<br>"."Total Quantity: ".$row["quantity"];
+                echo "<br>"."Unit Price: ".$row["price"]."<br>"; ?>
+                 <a href="edit.php?> 
+                    id=<?php echo $row["id"];?> 
+                    & iname=<?php echo $row["iname"]; ?> & quantity=<?php echo $row["quantity"]; ?>
+                    & price=<?php echo $row["price"];  ?> & Category=<?php echo $row["cat"];  ?>
+                    & quantity=<?php echo $row["quantity"];?>">
+                    <b>Edit Product</b></a>
+                    <?php 
+                     echo"<br>";?><a href="del.php?id=<?php echo $row["id"];?>"onclick="myFunction()"><b>Delete Product</b></a><?php echo"</br>";
 
                 if($i==3){
                     echo "</tr>";
