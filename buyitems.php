@@ -4,7 +4,7 @@
 <?php  require "connection/connection.php";
 session_start();
 $pselected='Your Product Name';
-if($_SESSION["buyer"] != true){
+if($_SESSION["user"] != true){
     ?>
     <script type="text/Javascript">
     window.location="login.php";
@@ -13,10 +13,11 @@ if($_SESSION["buyer"] != true){
     </script>
     <?php
 }
+
     
     
 if(isset($_POST["submitpurchase"])){
-    mysqli_query($link,"INSERT INTO myorder VALUES('','$_POST[pname]','$_POST[sellername]','$_POST[unitprice]', '$_POST[oqty]','$_POST[fprice]', '$_SESSION[buyer]','Not Approved')");
+    mysqli_query($link,"INSERT INTO myorder VALUES('','$_POST[iname]','$_POST[aname]','$_POST[unitprice]', '$_POST[oqty]','$_POST[price]', '$_SESSION[user]','Not Approved')");
     $msg = "Order Purchased Success Fully";
                 echo "<script type='text/javascript'>
                 alert('$msg');
@@ -38,7 +39,7 @@ if(isset($_POST["submitpurchase"])){
 		<!-- Get product list from the datbase -->
         <select name="pname1"  id="">
             <?php
-      $res=mysqli_query($link,"SELECT iname from products");
+      $res=mysqli_query($link,"SELECT DISTINCT iname from products");
         while($row=mysqli_fetch_array($res))
          {
              echo"<option>";
@@ -55,7 +56,7 @@ if(isset($_POST["submitpurchase"])){
             <?php
             if(isset($_POST["submitproduct"])){
                 $pselected=$_POST['pname1'];
-      $res=mysqli_query($link,"SELECT sellername from products where pname= '$_POST[pname1]'");
+      $res=mysqli_query($link,"SELECT sellername from products where iname= '$_POST[pname1]'");
         while($row=mysqli_fetch_array($res))
          {
              echo"<option>";
@@ -75,14 +76,14 @@ if(isset($_POST["submitpurchase"])){
      <?php
 
             if(isset($_POST["alldetails"])){
-        $res=mysqli_query($link,"SELECT * FROM products WHERE pname='$_POST[productname]'&& sellername='$_POST[sellername]'");
+        $res=mysqli_query($link,"SELECT * FROM products WHERE iname='$_POST[productname]'&& sellername='$_POST[sellername]'");
         while($row=mysqli_fetch_array($res))
          {     
             
              
              $pname=$row["iname"];
              $quantity=$row["quantity"];
-             $unitprice=$row["unitprice"];
+             $unitprice=$row["price"];
              $sellername=$row["sellername"]; 
                
 
@@ -120,7 +121,7 @@ if(isset($_POST["submitpurchase"])){
                 </script>";
                }else
              {
-                $pname1= $_POST['iname'];
+                $pname1= $_POST['pname'];
                 $agentname2=$_POST['sellername'];
                 $unitprice=$_POST['unitprice'];
                 $aqty=$_POST['aqty'];
@@ -141,7 +142,7 @@ if(isset($_POST["submitpurchase"])){
         Ordered Your Quantity:<br>
         <input type="number" value=<?php echo $oqty;?> name="oqty"><br>
         Final Price: <br>
-        <input type="number" name="price" value=<?php echo $finalprice; ?>><br>
+        <input type="number" name="price" value=<?php echo $total; ?>><br>
         <input type="submit" value="Purchase order" name="submitpurchase">
                  <?php
 
