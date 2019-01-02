@@ -3,7 +3,14 @@
 <head>
   <title>Smart Farming</title>
   <link rel="stylesheet" type="text/css" href="css/public.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
 </head>
+
 <body>
 <header>
 <div class="main">
@@ -14,20 +21,19 @@
       <h1>Smart Farming</h1>  <!-- heading -->
     </div>
   </div>
+  
   <div class="navbar1">
       <ul> <!-- navigation bar -->
-        <li><a href="sellharvest.php"> PROFILE </a> </li>
-        <li><a href="./allproducts.php"> MY PRODUCTS </a> </li>
+          <li><a class="active" href="./index.php">Home</a></li>
+          <li><a href="sellharvest.php"> PROFILE </a> </li>
+          <li><a href="myproducts.php"> MY PRODUCTS </a> </li>
+
+        <ul class="topnav-right">
         <li><a href="index.php"> LOG OUT </a> </li>
-        <li><a href="./orders.php"> ORDER REQUESTS </a></li>
-        <li> <?php
-  session_start();
-  $user= $_SESSION['user'];
-  echo "$user";
-  ?>
-  </li>
+
       </ul> 
-    </div>
+  </div>
+
 </div>
 </header>
 </body>
