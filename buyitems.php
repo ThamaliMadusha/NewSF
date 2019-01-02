@@ -17,11 +17,24 @@ if($_SESSION["user"] != true){
     
     
 if(isset($_POST["submitpurchase"])){
-    mysqli_query($link,"INSERT INTO myorder VALUES('','$_POST[iname]','$_POST[aname]','$_POST[unitprice]', '$_POST[oqty]','$_POST[price]', '$_SESSION[user]','Not Approved')");
-    $msg = "Order Purchased Success Fully";
+    $iname = $_POST['iname'];
+    $aname = $_POST['aname'];
+    $uniprice = $_POST['unitprice'];
+    $oqty = $_POST['oqty'];
+    $price = $_POST['price'];
+    $user = $_SESSION['user'];
+    $contact = $_POST['cnumber'];  
+
+        $sql1 = "INSERT INTO myorder VALUES('', '$iname', '$aname', $uniprice, $oqty, $price, '$user', '$contact', 'Not Approved')";
+    if ($link->query($sql1)) {
+        $msg = "Order Purchased Success Fully";
                 echo "<script type='text/javascript'>
-                alert('$msg');
-                </script>";
+                 alert('$msg');
+                 </script>";
+    }
+    else{
+        echo "error".$sql1."<br>".$link->error;
+    }
 
 }   
     ?>
@@ -35,7 +48,7 @@ if(isset($_POST["submitpurchase"])){
 <h1> Request Your Order </h1>
 <div class="hello">	
 	<form name="buyerreg" action="buyitems.php" method="POST">
-		Search You Product :<br>
+		Search Your Product :<br>
 		<!-- Get product list from the datbase -->
         <select name="pname1"  id="">
             <?php
@@ -85,6 +98,7 @@ if(isset($_POST["submitpurchase"])){
              $quantity=$row["quantity"];
              $unitprice=$row["price"];
              $sellername=$row["sellername"]; 
+        
                
 
      
@@ -94,6 +108,8 @@ if(isset($_POST["submitpurchase"])){
         <input type="text" value="<?php echo $pname; ?>" name="pname" readonly><br>
         Seller Name:<br>
         <input type="text" value="<?php echo $sellername; ?>" name="sellername" readonly><br>
+        Buyer's Contact Number:
+        <input type="number" name="bcontact"><br>
         Unit Price:<br>
         <input type="number" value="<?php echo $unitprice; ?>" name="unitprice" readonly><br>
         Available Product Quantity:<br>
@@ -127,6 +143,8 @@ if(isset($_POST["submitpurchase"])){
                 $aqty=$_POST['aqty'];
                 $oqty=$_POST['oqty'];
                 $total=($_POST['unitprice']*$_POST['oqty']);
+                $number = $_POST['bcontact'];
+                
                 ?>
                 
                  
@@ -135,6 +153,8 @@ if(isset($_POST["submitpurchase"])){
         <input type="text" value=<?php echo $pname1; ?> name="iname" readonly><br>
         Agent Name:<br>
         <input type="text" value=<?php echo $agentname2; ?> name="aname" readonly><br>
+        Buyer's Contact Number:
+        <input type="number" value=<?php echo $number; ?> name="cnumber" readonly><br>
         Unit Price:<br>
         <input type="number" value=<?php echo $unitprice; ?> name="unitprice" readonly><br>
         Available Product Quantity:<br>
