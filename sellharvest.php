@@ -4,10 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add Product</title>
-	
+<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+<title>Add Product</title>	
+  
 </head>
-<body>
+
+<body class="bg">
 	<?php include("includes/wateringhead.php"); ?>
 	<h1> Add a Product </h1>
 	<?php include("sellharvestform.php"); ?>
