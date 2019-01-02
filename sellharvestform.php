@@ -8,8 +8,9 @@ require "connection/connection.php";
 <head>
 	<title>Add Product</title>
 	<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+  
 </head>
-<body>
+<body bgcolor="  #ffe6e6">
 <div class="hello">	
 	<form name="inputproduct" method="POST" action="sellharvest.php" enctype="multipart/form-data">
 		Product Name:<br>
