@@ -30,9 +30,7 @@
 
         <ul class="topnav-right">
         <li><a href="index.php"> LOG OUT </a> </li>
-        <li>        </li>
-        <li><?php echo "$user"; ?> </li>
-        </ul>
+
       </ul> 
   </div>
 
