@@ -10,7 +10,7 @@ require "connection/connection.php";
 	<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
 </head>
 <body>
-<div class="hello">	
+	<div class="hello">	
 	<form name="inputproduct" method="POST" action="sellharvest.php" enctype="multipart/form-data">
 		Product Name:<br>
 		<input type="text" name="iname" ><br>
@@ -31,8 +31,7 @@ require "connection/connection.php";
 		<input type="text" name="sellername"><br> 
 		Upload Image:<br><br>
 		<input type="file" value="upload" name="fileToUpload"><br><br>
-		<input type="submit" name="submit" value="Insert Product">
-		
+		<input type="submit" name="submit" value="Insert Product"> 
 	</form>
 
 	<?php
@@ -54,3 +53,5 @@ require "connection/connection.php";
 	
 	?>
 </div>
+</body>
+</html>

@@ -19,7 +19,10 @@
         <li><a href="homepage.php">HOME</a></li>
         <li><a href="problems.php">HELP</a></li>
         <li><a href="contact.php">CONTACT</a></li>
-        <li><a href="index.php">LOG OUT</a></li>
+                <ul class="topnav-right">
+
+        <li><a href="index.php">LOG OUT</a></li></ul>
+
     <div class="navbar2">
         <li> <?php
   session_start();

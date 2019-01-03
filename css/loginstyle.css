@@ -36,8 +36,8 @@ input[type=number], select {
 	
 input[type=submit]{
     width:100%;
-    background-color: #49F76C;
-    color: white;
+    background-color:#49F76C;
+    color: #2d8659 ;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -47,17 +47,22 @@ input[type=submit]{
 }
 
 input[type=submit]:hover {
-    background-color: #1FDC4B;
+    background-color:  #0044cc;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
+
 
 .hello {
     border-radius: 5px;
-    background-color: #C6B4CE;
     padding: 20px;
     width: 50%;
     margin: auto;
-
-    
+    background-color:#66ff99;    
 }
 
 h1{
@@ -67,4 +72,12 @@ div.form-1{
     width:30%;
     margin-left: 50px;
 
-}    
+}  
+
+.bg {
+      background-image : url("img/bg.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

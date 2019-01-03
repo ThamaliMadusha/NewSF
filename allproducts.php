@@ -11,11 +11,10 @@
     <title>Document</title>
     
 </head>
+ <!-- navigatioon bar -->
 <?php include("navbar/viewnav.php"); ?>
-<body>
-    <!-- navigatioon bar -->
-    
-    <h1 style="text-align:center;">All products</h1>
+
+    <h1 style="text-align:center;"> All products </h1>
 
 <br>
 <div class="container">

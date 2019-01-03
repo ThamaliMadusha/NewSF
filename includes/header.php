@@ -15,7 +15,7 @@
     </div>
   </div>
       <div class="navbar1">
-        <?php include("./navbar/navbar.php"); ?>
+        <?php include("navbar/navbar.php"); ?>
       </div>
 </div>
 </header>

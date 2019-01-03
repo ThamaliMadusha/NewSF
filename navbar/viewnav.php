@@ -18,7 +18,7 @@
   <div class="topnav">
     <img src="Images/smatrfarm.png" class="img1">
     <div class="nametxt font7">
-      <h1>Smart Farming</h1>  <!-- heading -->
+      <!-- <h1>Smart Farming</h1> -->  <!-- heading -->
     </div>
   </div>
   
