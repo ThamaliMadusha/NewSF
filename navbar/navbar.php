@@ -15,6 +15,7 @@ ul {
 
 li {
     float: left;
+    font-family: Roboto;
 }
 
 li a {
@@ -40,8 +41,8 @@ li a:hover {
 
   <ul class="topnav-right">
     <li><a href="./login.php">Sign in</a></li>
-  <li><a href="./register.php">Sign up</a></li>
-</ul>
+    <li><a href="./register.php">Sign up</a></li>
+  </ul>
 </ul>
 
 </body>

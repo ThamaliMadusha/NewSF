@@ -17,19 +17,24 @@
   <div class="navbar1">
       <ul> <!-- navigation bar -->
         <li><a href="homepage.php">HOME</a></li>
-        <li><a href="problems.php">HELP</a></li>
         <li><a href="contact.php">CONTACT</a></li>
                 <ul class="topnav-right">
-
         <li><a href="index.php">LOG OUT</a></li></ul>
 
     <div class="navbar2">
-        <li> <?php
+  <ul><li> 
+  <?php
   session_start();
   $user= $_SESSION['user'];
   echo "$user";
   ?>
-  </li>
+  </li>       
+
+    <li> <img src="img/logo.png" width="25px" height="25px" > </li>
+</ul>
+
+  <!---<li> <img src="img/logo.png" width="25px" height="25px" > </li><!-->
+
 </div>
 </div>
 

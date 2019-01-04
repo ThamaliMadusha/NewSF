@@ -19,16 +19,19 @@ if($_SESSION["user"] != true){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+
     <title>Document</title>
 </head>
 <style> img {
   border-radius: 50%;
 }
 </style>
+
 <body >
 <!-- NAvigation bar -->
 
-<?php require "includes/wateringhead.php"; ?>
+<?php require "navbar/sellnavbar.php"; ?>
 
 <h1 style="text-align:center;">My products</h1>
     <div class="product-list">
@@ -45,25 +48,21 @@ if($_SESSION["user"] != true){
                 ?>
                 <div class="container">
                  <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-12">
                 <img src="<?php echo  $row["image"]; ?>" style="width:250px; height:250px";>
                 <?php
-                echo "<br>";
+                echo "<br>"; 
                 echo"<b>"."Product Name : "."</b>".$row["iname"]."<br>";
                 echo"<b>"."Quantity : "."</b>".$row["quantity"]."<br>";
                 echo "<b>"."Price :  "."</b>".$row["price"]."<br>";
                 echo "<b>"."Price :  "."</b>".$row["price"]."<br>";
                 echo "<b>"."Category  : "."</b>".$row["cat"]."</b>"."<br>" ;?>
                  <a href="edit.php?id=<?php echo $row["id"];?>&iname=<?php echo $row["iname"]; ?>&quantity=<?php echo $row["quantity"];?>&price=<?php echo $row["price"];?>&cat=<?php echo $row["cat"];?>">
-                    <?php 
-                     echo"<br>";?>
+
                     <b>Edit Product</b></a>
                 </div>
             </div>
-        </div>
-                    <?php 
-                     echo"<br>";?>
-                     <a href="del.php?id=<?php echo $row["id"];?>"onclick="myFunction()"><b>Delete Product</b></a><?php echo"</br>";
+        <a href="del.php?id=<?php echo $row["id"];?>"onclick="myFunction()"><b>Delete Product</b></a><?php echo"</br>";
 
                 echo "</td>";
                 if($i==3){
@@ -83,6 +82,7 @@ if($_SESSION["user"] != true){
             </script>
 
     </div>
+  </div>
     
 </body>
 </html>

@@ -34,7 +34,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/loginstyle.css">
 </head>
 <body>
-    <?php include("navbar/loginnav.php");?>
+    <?php include("navbar/navbar.php");?>
     <h1> Login </h1>
     <div class="login">
     <form name="login" method="POST" action="login.php">

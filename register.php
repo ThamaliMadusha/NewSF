@@ -39,7 +39,7 @@ if(isset($_POST["submit"])){
 	<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
 </head>
 <body>
-	<?php include("navbar/signupnav.php");?>
+	<?php include("navbar/navbar.php");?>
 	<h1> Register Form</h1>
 	<div>	
 	<form name="reg" action="register.php" method="POST">
@@ -50,7 +50,7 @@ if(isset($_POST["submit"])){
 		Contact Number:<br>
         <input type="number" name="contact" required><br>
         Email:<br>
-        <input type="text" name="email" required><br>
+        <input type="email" name="email" required><br>
         Password:<br>
         <input type="password" name="password" required><br>
         Confirm Password:<br>

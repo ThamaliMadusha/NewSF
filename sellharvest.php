@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg">
-	<?php include("includes/wateringhead.php"); ?>
+	<?php include("navbar/sellnavbar.php"); ?>
 	<h1> Add a Product </h1>
 	<?php include("sellharvestform.php"); ?>
 		

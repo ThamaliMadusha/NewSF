@@ -12,7 +12,7 @@
     
 </head>
  <!-- navigatioon bar -->
-<?php include("navbar/viewnav.php"); ?>
+<?php include("navbar/sellnavbar.php"); ?>
 
     <h1 style="text-align:center;"> All products </h1>
 
@@ -46,7 +46,7 @@
             <img class="card-img-top" src="./img/tools.jpg" alt="Card image cap" width="250px" height="250px">
             <div class="card-body text-center">
                 <form action="displayCat.php" method="POST">
-                    <input type="submit" name="tools" class="btn btn-primary" value="Tools">
+                    <input type="submit" name="tools" class="btn btn-primary" value="Agricultural Tools">
                 </form>
             </div>
             </div>

@@ -16,7 +16,7 @@
     <title>Document</title>
     
 </head>
-<?php include("navbar/viewnav.php"); ?>
+<?php include("navbar/sellnavbar.php"); ?>
 <body>
     <!-- navigatioon bar -->
     
@@ -50,13 +50,23 @@
         $res=mysqli_query($link,"SELECT * FROM products WHERE cat='other'");
         showData($res);
     }
+                 
 
+
+    // 
     function showData($r){
+        require "connection/connection.php";
         echo "<table style='margin-left:150px;margin-top:50px; border-collapse: separate;
   border-spacing: 50px 50px;'>";
             echo "<tr>";
+
+        
+
             $i = 0;
             while($row=mysqli_fetch_array($r,MYSQL_ASSOC)){
+                $s = $row['sellername'];
+                $res1=mysqli_query($link,"SELECT name, contact_no FROM users WHERE name = '$s'");
+                $row2 = mysqli_fetch_assoc($res1);
                 $i= $i+1;
                 echo"<td>";
                 ?>
@@ -72,6 +82,11 @@
                 echo"<br>"."<b>"."Product Name : "." </b>".$row["iname"];
                 echo"<br>"."<b>"."Total Quantity: "." </b>".$row["quantity"];
                 echo "<br>"."<b>"."Unit Price: "." </b>".$row["price"];
+                echo "<br>"."<b>"."Seller Name: "." </b>".$row2["name"];
+                echo "<br>"."<b>"."Seller Contact: "." </b>".$row2["contact_no"];
+
+
+
 
                 if($i==3){
                     echo "</tr>";

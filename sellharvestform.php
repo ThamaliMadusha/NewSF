@@ -13,9 +13,9 @@ require "connection/connection.php";
 	<div class="hello">	
 	<form name="inputproduct" method="POST" action="sellharvest.php" enctype="multipart/form-data">
 		Product Name:<br>
-		<input type="text" name="iname" ><br>
+		<input type="text" name="iname" required=""><br>
 		Product Quantity:<br>
-		<input type="number" name="quantity"><br>
+		<input type="number" name="quantity" required=""><br>
 		Unit Price:<br>
         <input type="number" step="0.01" name="price"><br>
        Category:<br>
@@ -31,7 +31,7 @@ require "connection/connection.php";
 		<input type="text" name="sellername"><br> 
 		Upload Image:<br><br>
 		<input type="file" value="upload" name="fileToUpload"><br><br>
-		<input type="submit" name="submit" value="Insert Product"> 
+		<input type="submit" name="submit" value="Insert Product" > 
 	</form>
 
 	<?php
